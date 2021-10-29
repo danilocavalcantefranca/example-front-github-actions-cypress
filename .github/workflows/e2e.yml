@@ -1,0 +1,17 @@
+name: e2e
+on:
+  workflow_dispatch:
+  jobs:
+  # example job showing the Netlify information
+  show-event:
+    runs-on: danilocavalcantefranca/example-github-actions
+  tests:
+    runs-on: danilocavalcantefranca/example-github-actions
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # https://github.com/cypress-io/github-action
+      # Installs and caches dependencies, runs all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        command: npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
