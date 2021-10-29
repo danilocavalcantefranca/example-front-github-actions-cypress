@@ -1,0 +1,24 @@
+{
+  "name": "todomvc-tests",
+  "version": "1.0.0",
+  "description": "Example E2E tests for an app that lives in a separate repository",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/todomvc-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bahmutov/todomvc-tests/issues"
+  },
+  "homepage": "https://github.com/bahmutov/todomvc-tests#readme",
+  "devDependencies": {
+    "cypress": "^7.6.0",
+    "prettier": "^2.3.2"
+  }
+}
