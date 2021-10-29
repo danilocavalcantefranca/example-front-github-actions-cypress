@@ -1,8 +1,9 @@
 name: e2e
 on:
   workflow_dispatch:
-  jobs:
+    jobs:
   # example job showing the Netlify information
+  name: Docker
   show-event:
     runs-on: danilocavalcantefranca/example-github-actions
   tests:
