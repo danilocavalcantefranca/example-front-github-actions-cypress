@@ -4,7 +4,8 @@ on: push
 jobs:
   test:
     name: Cypress run
-    runs-on: danilocavalcantefranca/example-github-actions
+    runs-on: ubuntu-latest
+    container: danilocavalcantefranca/example-github-actions
     steps:
       - uses: actions/checkout@v2
       - name: Cypress run 
