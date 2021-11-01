@@ -2,11 +2,10 @@ name: Automated Tests
 
 on: push
 jobs: 
-    runs-on: ubuntu-latest
-    container: danilocavalcantefranca/test-github-actions
-      command: npm start
   test:
     name: Cypress run
+    runs-on: ubuntu-latest
+    container: danilocavalcantefranca/test-github-actions
     steps:
       - uses: actions/checkout@v2
       - name: Cypress run 
