@@ -2,10 +2,13 @@ name: Automated Tests
 
 on: push
 jobs:
-  test:
-    name: Cypress run
+  jobs:
+  build:
     runs-on: ubuntu-latest
     container: danilocavalcantefranca/test-github-actions
+      command: npm start
+  test:
+    name: Cypress run
     steps:
       - uses: actions/checkout@v2
       - name: Cypress run 
@@ -14,5 +17,5 @@ jobs:
           record: false  
           #parallel: true
           #spec: cypress/integration/gui/${{ matrix.containers }}.js
-          #npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
-          command: npm start
+          command: npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
+          #command: npm start
