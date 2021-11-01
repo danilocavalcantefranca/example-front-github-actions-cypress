@@ -14,4 +14,5 @@ jobs:
           record: false  
           #parallel: true
           #spec: cypress/integration/gui/${{ matrix.containers }}.js
-          command: npm start & npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
+          #npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
+          command: npm start
