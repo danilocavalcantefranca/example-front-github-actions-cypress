@@ -1,19 +1,16 @@
-name: e2e
+name: Automated Tests
 
-on:
-workflow_dispatch:
-    jobs:
-  # example job showing the Netlify information
-  name: Docker
-  show-event:
-    runs-on: danilocavalcantefranca/example-github-actions
-  tests:
+on: push
+jobs:
+  test:
+    name: Cypress run
     runs-on: danilocavalcantefranca/example-github-actions
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # https://github.com/cypress-io/github-action
-      # Installs and caches dependencies, runs all Cypress tests
-      - name: Cypress run
+      - uses: actions/checkout@v2
+      - name: Cypress run 
         uses: cypress-io/github-action@v2
-        command: npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
+        with: 
+          record: false  
+          #parallel: true
+          #spec: cypress/integration/gui/${{ matrix.containers }}.js
+          command: npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
