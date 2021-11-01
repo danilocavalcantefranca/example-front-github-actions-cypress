@@ -5,7 +5,7 @@ jobs:
   test:
     name: Cypress run
     runs-on: ubuntu-latest
-    container: -p 3000:3000 danilocavalcantefranca/test-github-actions
+    container: danilocavalcantefranca/test-github-actions
     steps:
       - uses: actions/checkout@v2
       - name: Cypress run 
