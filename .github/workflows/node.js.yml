@@ -3,9 +3,9 @@ name: Automated Tests
 on: push
 jobs:
   job-name:
-    runs-on: ubuntu-latest
-    services:
-      image: danilocavalcantefranca/test-github-actions
+    container:
+      runs-on: ubuntu-latest
+      container: danilocavalcantefranca/test-github-actions
       ports: 3001:3000
     steps:
     - name: test curl
