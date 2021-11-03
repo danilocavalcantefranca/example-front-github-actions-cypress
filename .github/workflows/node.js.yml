@@ -6,7 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     services:
       image: danilocavalcantefranca/test-github-actions
-      ports: 3001:3000
     steps:
     - name: test curl
       run: npm start
