@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       image: danilocavalcantefranca/test-github-actions
-      ports: 3000:3000
+      #ports: 3000:3000
     steps:
     - uses: actions/checkout@v2
     - name: Cypress run 
