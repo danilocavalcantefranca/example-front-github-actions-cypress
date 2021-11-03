@@ -3,13 +3,13 @@ name: Automated Tests
 on: push
 jobs:
   job-name:
-    container:
-      runs-on: ubuntu-latest
-      container: danilocavalcantefranca/test-github-actions
+    runs-on: ubuntu-latest
+    services:
+      image: danilocavalcantefranca/test-github-actions
       ports: 3001:3000
     steps:
     - name: test curl
-      run: "curl --location --request GET 'http://localhost:3001/'"
+      run: npm start
     - uses: actions/checkout@v2
     - name: Cypress run 
       uses: cypress-io/github-action@v2
