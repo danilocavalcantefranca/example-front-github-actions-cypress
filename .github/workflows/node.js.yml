@@ -6,10 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     services:
       image: danilocavalcantefranca/test-github-actions
-      #ports: 3000:3000
+      ports: 3001:3000
     steps:
-    - name: start
-      run: npm start
+    - name: test curl
+      run: "curl --location --request GET 'http://localhost:3001/'"
     - uses: actions/checkout@v2
     - name: Cypress run 
       uses: cypress-io/github-action@v2
