@@ -8,7 +8,7 @@ jobs:
       image: danilocavalcantefranca/test-github-actions
     steps:
     - name: test curl
-      run: npm start
+      run: docker run
     - uses: actions/checkout@v2
     - name: Cypress run 
       uses: cypress-io/github-action@v2
@@ -36,3 +36,10 @@ jobs:
 #           #spec: cypress/integration/gui/${{ matrix.containers }}.js
 #           command: npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
 #           #command: npm start
+
+
+
+
+076958231
+
+
