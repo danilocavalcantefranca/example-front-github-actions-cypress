@@ -9,14 +9,14 @@ jobs:
       ports: 3000:3000
     steps:
     - uses: actions/checkout@v2
-       - name: Cypress run 
-         uses: cypress-io/github-action@v2
-         with: 
-           record: false  
-           #parallel: true
-           #spec: cypress/integration/gui/${{ matrix.containers }}.js
-           command: npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
-           #command: npm start
+    - name: Cypress run 
+      uses: cypress-io/github-action@v2
+      with: 
+        record: false  
+        #parallel: true
+        #spec: cypress/integration/gui/${{ matrix.containers }}.js
+        command: npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
+        #command: npm start
 
 
 # on: push
