@@ -8,6 +8,8 @@ jobs:
       image: danilocavalcantefranca/test-github-actions
       #ports: 3000:3000
     steps:
+    - name: start
+      run: npm start
     - uses: actions/checkout@v2
     - name: Cypress run 
       uses: cypress-io/github-action@v2
