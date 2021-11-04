@@ -7,6 +7,6 @@ services:
     depends_on:
       - node
   node:
-    image: danilocavalcantefranca/node-inflate-jwt:tagname
+    image: danilocavalcantefranca/test-github-actions
     ports:
       - "3000:3000"
