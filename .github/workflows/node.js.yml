@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: test docker
-      run: docker-compose up -d
+      run: docker-compose -f "docker-compose.yml" up
     - uses: actions/checkout@v2
     - name: Cypress run 
       uses: cypress-io/github-action@v2
