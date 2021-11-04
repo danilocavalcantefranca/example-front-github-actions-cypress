@@ -7,9 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: test docker
-      run: docker pull danilocavalcantefranca/test-github-actions
-    - name: test docker images  
-      run: docker run danilocavalcantefranca/test-github-actions && npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
+      run: docker-compose up
     - uses: actions/checkout@v2
     - name: Cypress run 
       uses: cypress-io/github-action@v2
