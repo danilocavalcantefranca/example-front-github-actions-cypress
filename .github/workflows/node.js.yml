@@ -11,7 +11,8 @@ jobs:
       #run: docker-compose -f "docker-compose.yml" up -d --build
       #run: docker-compose build -f example-front-github-actions-cypress/docker-compose.yml
       #run: docker-compose build
-      run: docker-compose run app
+      #run: docker-compose run app
+      run: docker-compose up --build
     #- name: Cypress run 
       #uses: cypress-io/github-action@v2
       #with: 
