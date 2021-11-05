@@ -10,7 +10,7 @@ RUN npm install
 
 #ENV args = ''
 
-ENTRYPOINT npx cypress run --config baseUrl=http://localhost:3001/ --config video=false
+ENTRYPOINT npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
 
 
 #docker-compose up --force-recreate
