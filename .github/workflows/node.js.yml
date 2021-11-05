@@ -5,10 +5,10 @@ on: push
 jobs:
   job-name:
     runs-on: ubuntu-latest
+    container: danilocavalcantefranca/test-github-actions
     steps:
     - uses: actions/checkout@v2
     - name: test docker
-      container: danilocavalcantefranca/test-github-actions
       start: npm start
     #- name: test docker stop
     #  run: docker-compose stop
