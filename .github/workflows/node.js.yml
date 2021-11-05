@@ -13,7 +13,7 @@ jobs:
       #run: docker-compose build
       #run: docker-compose run app
       run: docker-compose up --build 
-      - name: test docker stop
+    - name: test docker stop
       run: docker-compose stop
     #- name: Cypress run 
       #uses: cypress-io/github-action@v2
