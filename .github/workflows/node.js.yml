@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: test docker
-      start: npm start
+      run: npm start
     #- name: test docker stop
     #  run: docker-compose stop
     #- name: Cypress run 
