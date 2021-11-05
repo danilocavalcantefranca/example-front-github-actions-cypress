@@ -8,10 +8,10 @@ jobs:
     steps:
     - name: test docker
       #run: docker-compose -f "docker-compose.yml" up -d --build
-      run: docker-compose up -d -f example-front-github-actions-cypress/docker-compose.yml
-    - uses: actions/checkout@v2
-    - name: Cypress run 
-      uses: cypress-io/github-action@v2
+      run: docker-compose -f example-front-github-actions-cypress/docker-compose.yml --build
+    #- uses: actions/checkout@v2
+    #- name: Cypress run 
+      #uses: cypress-io/github-action@v2
       #with: 
         #record: false  
         #parallel: true
