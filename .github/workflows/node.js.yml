@@ -5,13 +5,18 @@ on: push
 jobs:
   job-name:
     runs-on: ubuntu-latest
-    container: danilocavalcantefranca/test-github-actions
     steps:
     - uses: actions/checkout@v2
     - name: test docker
-      run: npm start
-    #- name: test docker stop
-    #  run: docker-compose stop
+      #run: docker-compose -f "docker-compose.yml" up -d --build
+      #run: docker-compose build -f example-front-github-actions-cypress/docker-compose.yml
+      #run: docker-compose build
+      #run: docker-compose run app
+      run: docker-compose up --build
+      with: 
+        wait-on: 'http://localhost:3000'
+    - name: test docker stop
+      run: docker-compose stop
     #- name: Cypress run 
       #uses: cypress-io/github-action@v2
       #with: 
