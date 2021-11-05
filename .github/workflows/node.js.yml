@@ -9,8 +9,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: test docker
       #run: docker-compose -f "docker-compose.yml" up -d --build
-      #run: docker-compose build -f example-front-github-actions-cypress/docker-compose.yml
-      run: docker-compose -f example-front-github-actions-cypress/docker-compose.yml build
+      run: docker-compose build -f example-front-github-actions-cypress/docker-compose.yml
+      #run: docker-compose -f example-front-github-actions-cypress/docker-compose.yml build
     #- name: Cypress run 
       #uses: cypress-io/github-action@v2
       #with: 
