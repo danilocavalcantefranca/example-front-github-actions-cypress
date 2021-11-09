@@ -1,13 +1,13 @@
 version: '3'
 services:
-  my-service:
-    network_mode: host
   app:
     build:
       context: .
       dockerfile: Dockerfile
     depends_on:
       - node
+    my-service:
+      network_mode: host
   node:
     image: danilocavalcantefranca/test-github-actions
     ports:
