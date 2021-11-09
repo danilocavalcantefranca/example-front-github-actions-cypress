@@ -1,5 +1,7 @@
 version: '3'
 services:
+  my-service:
+    network_mode: host
   app:
     build:
       context: .
@@ -8,7 +10,6 @@ services:
       - node
   node:
     image: danilocavalcantefranca/test-github-actions
-    network_mode: "host"
     ports:
       - "3000:3000"
     healthcheck:
