@@ -12,7 +12,7 @@ jobs:
       #run: docker-compose build -f example-front-github-actions-cypress/docker-compose.yml
       #run: docker-compose build
       #run: docker-compose run app
-      run: docker-compose up --build 
+      run: docker-compose up --build --abort-on-container-exit
     - name: test docker stop
       run: docker-compose stop
     #- name: Cypress run 

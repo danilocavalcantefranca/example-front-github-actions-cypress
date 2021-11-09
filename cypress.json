@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://localhost:3000",
+  "baseUrl": "http://node:3000",
   "fixturesFolder": false,
   "supportFile": false,
   "pluginsFile": false,
