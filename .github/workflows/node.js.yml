@@ -8,35 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: test docker
-      #run: docker-compose -f "docker-compose.yml" up -d --build
-      #run: docker-compose build -f example-front-github-actions-cypress/docker-compose.yml
-      #run: docker-compose build
-      #run: docker-compose run app
       run: docker-compose up --build --abort-on-container-exit
     - name: test docker stop
       run: docker-compose stop
-    #- name: Cypress run 
-      #uses: cypress-io/github-action@v2
-      #with: 
-        #record: false  
-        #parallel: true
-        #spec: cypress/integration/gui/${{ matrix.containers }}.js
-        #command: npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
-        #command: npm start
-
-#on: push
-#jobs: 
-#  test:
-#    name: Cypress run
-#    runs-on: ubuntu-latest
-#    container: danilocavalcantefranca/test-github-actions
-#    steps:
-#      - uses: actions/checkout@v2
-#      - name: Cypress run 
-#        uses: cypress-io/github-action@v2
-#        with: 
-#          record: false  
-#          #parallel: true
-#          #spec: cypress/integration/gui/${{ matrix.containers }}.js
-#          command: npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
-#          #command: npm start
