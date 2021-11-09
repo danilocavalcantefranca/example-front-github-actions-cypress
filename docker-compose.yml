@@ -1,18 +1,14 @@
 version: '3'
+
 services:
-  app:
+  cypress:
     build:
       context: .
       dockerfile: Dockerfile
     depends_on:
-      - node
-    my-service:
-      network_mode: host
-  node:
-    image: danilocavalcantefranca/test-github-actions
+      - front
+  front:
+    build:
+      context: ./front/example-front-github-actions
     ports:
       - "3000:3000"
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000"] 
-      timeout: 10s
-      retries: 5

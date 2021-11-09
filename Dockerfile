@@ -2,15 +2,16 @@ FROM cypress/base:10
 
 RUN mkdir automation
 WORKDIR /automation
-COPY ./ .
 
 COPY package*.json ./
 
 RUN npm install
 
+COPY ./ .
+
 #ENV args = ''
 
-ENTRYPOINT npx cypress run --config baseUrl=http://localhost:3000/ --config video=false
+ENTRYPOINT npx cypress run --config video=false
 
 
 #docker-compose up --force-recreate
